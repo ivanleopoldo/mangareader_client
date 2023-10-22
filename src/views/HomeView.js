@@ -1,12 +1,20 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { View, Text } from "react-native";
-import BaseLayout from "../layouts/BaseLayout";
+import { StatusBar } from "expo-status-bar";
+import { View } from "react-native";
+import { HomeLayout } from "../layouts";
+import HotCarousel from "../components/home/HotCarousel";
+import MoreList from "../components/home/MoreList";
+import ResultList from "../components/searchresults/ResultList";
 
 export default function HomeView() {
   return (
-    <BaseLayout>
-      <Text className="text-red-700">World</Text>
-    </BaseLayout>
+    <HomeLayout>
+      <StatusBar style="light" />
+      <View className="px-5">
+        <ResultList />
+        {/* <HotCarousel />
+        <MoreList /> */}
+      </View>
+    </HomeLayout>
   );
 }
